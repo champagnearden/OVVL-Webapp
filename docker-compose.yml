@@ -1,0 +1,10 @@
+services:
+  ovvl-webapp:
+    # Build the service from the Dockerfile in the current directory
+    build:
+      context: .
+      dockerfile: Dockerfile    
+    container_name: ovvl_webapp
+    ports:
+      - "80:80"
+    restart: unless-stopped
